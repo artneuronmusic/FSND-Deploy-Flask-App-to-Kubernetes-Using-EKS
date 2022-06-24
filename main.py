@@ -113,3 +113,8 @@ def _get_jwt(user_data):
 
 if __name__ == '__main__':
     APP.run(host='127.0.0.1', port=8080, debug=True)
+
+'''
+curl --data '{"email":"abc@xyz.com","password":"WindowsPwd"}' --header "Content-Type: application/json" -X POST localhost:8080/auth
+curl --request GET 'http://localhost:8080/contents' -H "Authorization: Bearer ${TOKEN}"
+'''
